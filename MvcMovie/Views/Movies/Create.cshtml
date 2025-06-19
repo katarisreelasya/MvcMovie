@@ -31,6 +31,11 @@
                     <input asp-for="Genre" class="form-control" placeholder="e.g., Action, Comedy" />
                     <span asp-validation-for="Genre" class="text-danger"></span>
                 </div>
+                <div class="mb-3">
+                    <label asp-for="Rating" class="form-label fw-bold">Rating</label>
+                    <input asp-for="Rating" class="form-control" />
+                    <span asp-validation-for="Rating" class="text-danger"></span>
+                </div>
 
                 <div class="mb-4">
                     <label asp-for="Price" class="form-label fw-bold">Price ($)</label>
