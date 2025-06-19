@@ -1,0 +1,38 @@
+﻿@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-info text-white">
+            <h2><i class="bi bi-info-circle-fill"></i> @ViewData["Title"]</h2>
+        </div>
+
+        <div class="card-body">
+            <dl class="row fs-5">
+                <dt class="col-sm-3 text-secondary">@Html.DisplayNameFor(model => model.Title)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Title)</dd>
+
+                <dt class="col-sm-3 text-secondary">@Html.DisplayNameFor(model => model.ReleaseDate)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.ReleaseDate)</dd>
+
+                <dt class="col-sm-3 text-secondary">@Html.DisplayNameFor(model => model.Genre)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Genre)</dd>
+
+                <dt class="col-sm-3 text-secondary">@Html.DisplayNameFor(model => model.Price)</dt>
+                <dd class="col-sm-9">$@Html.DisplayFor(model => model.Price)</dd>
+            </dl>
+        </div>
+
+        <div class="card-footer d-flex justify-content-between">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">
+                <i class="bi bi-pencil-square"></i> Edit
+            </a>
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left-circle"></i> Back to List
+            </a>
+        </div>
+    </div>
+</div>
